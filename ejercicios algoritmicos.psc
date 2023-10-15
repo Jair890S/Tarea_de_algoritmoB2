@@ -1,28 +1,49 @@
 //ejercicio del video numero 1 
+//bosquejo:
+//entrada:edad(leer)
+//proceso: colocar el comando escribir y pedir al usuario su edad
+//luego, leer la variable
+//salida: el programa mostrara cuantos aÃ±os tiene el usuario
 Funcion edad_del_usuario
+//definir nombre de las variables
 	definir edad Como Caracter
-	escribir "¿Que edad tienes?"
+//definir valor de las variables
+        edad=""
+	escribir "Â¿Que edad tienes?"
 	leer edad
-	escribir edad," años."
+//salida
+	escribir edad," aÃ±os."
 FinFuncion
 
 //ejercicio del viddeo numero 2
-Funcion suma_ejvideo 
+//bosquejo:
+//entrada:num1=0(leer);num2(leer);res=(num1+num2)
+//proceso:leer las variables y luego calcular ambas variables
+//salida: suma
+Funcion suma_ejvideo
+        //definir el nombre y tipo de las variables
 	definir num1,num2,res como entero
+        //pedimos las variables
 	escribir "Ingrese el numero 1"
 	leer num1
 	escribir "Ingrese el numero 2"
 	leer num2
-	res<-num1+num2
-	escribir "el resultado de la operacion es: ",res
+        //salida
+	res<-num1+num2   //realizamos la operacion
+	escribir "el resultado de la operacion es: ",res  //mostramos la respuesta de la operacion
 FinFuncion
 
 //ejercicio del video numero 3
+//bosquejo:
+//entrada: edad(leer)
+//proceso:leer la variable, despues colocar el comando si-entonces
+//salida: La condicion mostrara si el usuario esa mayor de edad y si no lo es.
 funcion edad_condicion
+       //definir tipo y nombre de variables
 	definir edad Como Entero
 	escribir "Ingrese su edad"
 	leer edad
-	si edad>18 Entonces
+	si edad>18 Entonces  //condicionar si la variables mayor que 18 mostrar que es mayor de edad, sino mostrar que es menor
 		escribir "Eres mayor de edad"
 	SiNo
 		escribir "No eres mayor de edad"
@@ -30,9 +51,16 @@ funcion edad_condicion
 FinFuncion
 
 //ejercicio del video numero 4
+//bosquejo:
+//entrada:sed="si";dinero"no"
+//proceso: condicionar y colocar comandos and y or en las operaciones
+//salida: el programa mostrara mesajes segun la condicion dada
 Funcion logico_and_or
+        //definir nombre y tipo de variables
 	definir sed,dinero Como Caracter
+        //definir valor de las variables
 	edad<-"si";dinero<-"no"
+        //condicionar segun lo propuesto por el ejercicio
 	si sed="si" o dinero="si" Entonces
 		Escribir "Compra una botella de agua"
 	SiNo
@@ -45,10 +73,17 @@ Funcion logico_and_or
 FinFuncion
 
 //ejercicio del video numero 5
+//bosquejo:
+//entrada:numale(aleatorio(0,10));numusuario(leer)
+//proceso:El programa ingresara un valor aleatorio a la variable numale
+//leer las demas variables, luego ingresar un bucle-while y condicionar hasta que el usuario ingrese el numero correcto
+//salida:el programa mostrara si el usuario ingreso el valor correcto en sus tres intentos
+//sino el programa enseÃ±ara un mensaje que no adivino el valor
 funcion adivinar_numero
+       //definir nombre y tipo de variables
 	definir numale Como Entero
 	definir numusuario Como Entero
-	numale<-Aleatorio(0,10)
+	numale<-Aleatorio(0,10)  //el comando aleatorio establece un valor aleatorio a la variables
 	intentos<-3
 	mientras intentos>0 Hacer
 		escribir "Ingrese un numero del 1 al 10."
@@ -61,22 +96,28 @@ funcion adivinar_numero
 			escribir "El numero es incorrecto, te quedan ",intentos," intentos"
 		FinSi
 	FinMientras
+        //salida
 	si intentos=0 Entonces
-		escribir "¡Ya no te quedan intentos!, perdiste!"
+		escribir "Â¡Ya no te quedan intentos!, perdiste!"
 	sino 
 		escribir "Felicidades, Ganaste!"
 	FinSi
 FinFuncion
 
 //ejercicio del video numero 6
+//bosquejo:
+//entrada:combo(leer)
+//proceso:leer las variables. colocar un comando segun, y colocar opciones segun el numero de la variable
+//salida: el comando mostrara un mensaje segun el numero puesto por el usuario
 funcion Funcionsegun
+       //definir nombre y tipo de variable
 	definir combo Como Entero
 	escribir "Que combo desea?"
 	escribir "1: combo 1"
 	escribir "2: combo 2"
 	escribir "3: combo 3"
 	leer combo
-	segun combo hacer
+	segun combo hacer  //el mensaje de cada numero es la salida del programa
 		1:
 			escribir "El valor es de $5000"
 		2:
@@ -89,10 +130,15 @@ funcion Funcionsegun
 FinFuncion
 
 //ejercicio del video numero 7
+//bosquejo:
+//entrada:num=(aleatorio(0,10));res=(leer)
+//proceso:Colocar el comando repetir y repetir el proceso hasta que el usuario prefiera ese numero
+//salida:La respuesta "no" sera la cual culmine el programa
 funcion ciclosrepetir_numaletorio
+        //definir nombre y tipo de variables
 	definir num Como Entero
 	definir res Como Caracter
-	repetir 
+	repetir //colocar el comando repetir, hasta que el usuario escoja el numero
 		num<-Aleatorio(0,10)
 		escribir "El numero aletorio es: ",num
 		escribir "Deseas otro numero?"
@@ -101,6 +147,10 @@ funcion ciclosrepetir_numaletorio
 FinFuncion
 
 //ejercicio del video numero 8
+//bosquejo:
+//entrada:personas[ignacio,victor,juanito]
+//proceso:colocar un bucle for y escriba el valor dentro de las variables
+//salida:el bucle mostrara los valores dentro del arreglo
 funcion arreglo_nombres 
 	dimension personas(3)
 	personas(0)="Ignacio"
@@ -113,8 +163,8 @@ funcion arreglo_nombres
 FinFuncion
 
 //ejercicios del video numero 9
-funcion funcion_suma(dat1,dat2)
-	escribir "El resultado de la operacion es: ",dat1+dat2
+funcion funcion_suma(dat1,dat2)  //colocar dentro los parametro
+	escribir "El resultado de la operacion es: ",dat1+dat2  //realizar la operacion final y devolverla al algoritmo
 FinFuncion
 
 //Dado a=3 y b=7, encuentra el valor de y = 2 * a + b - a mod 3
@@ -333,7 +383,7 @@ FinFuncion
 
 
 
-	//Suma de dos números: Escribe un programa que tome dos números como
+	//Suma de dos nÃºmeros: Escribe un programa que tome dos nÃºmeros como
 	//entrada y muestre su suma.
 	//bosquejo:
 	//entr: num1=0(leer);num2=0(leer);x=0(calculado)
@@ -365,8 +415,8 @@ FinFuncion
 FinFuncion
 
 
-//Área de un triángulo: Pide al usuario que ingrese la base y la altura de un triángulo,
-//luego calcula y muestra su área
+//Ãrea de un triÃ¡ngulo: Pide al usuario que ingrese la base y la altura de un triÃ¡ngulo,
+//luego calcula y muestra su Ã¡rea
 //bosquejo:
 //ent: n1=0(leer);n2=0(leer);n3=0(calculando)
 //pro: calcular las 2 variables puestas por el usuria con la formula del area
@@ -392,7 +442,7 @@ Funcion area_de_un_triangulo
 	//finalizamos el programa
 FinFuncion
 
-//Número par o impar: Solicita al usuario que ingrese un número e indica si es
+//NÃºmero par o impar: Solicita al usuario que ingrese un nÃºmero e indica si es
 //par o impar.
 //bosquejo:
 //ent: x=0(leer)
@@ -422,8 +472,8 @@ FinFuncion
 
 
 
-	//Calculadora simple: Crea una calculadora que realice operaciones básicas
-	//como suma, resta, multiplicación y división, según la elección del usuario
+	//Calculadora simple: Crea una calculadora que realice operaciones bÃ¡sicas
+	//como suma, resta, multiplicaciÃ³n y divisiÃ³n, segÃºn la elecciÃ³n del usuario
 	//bosquejo:
 	//ent: n1(leer)=0?,n2=0?(leer),operacion="?(leer),res=0?(calculada)
 	//pro: si operacion="+"
@@ -478,7 +528,7 @@ Funcion calculadora_simple
 	Fin Si
 FinFuncion
 
-//Tabla de multiplicar: Pide al usuario un número y muestra su tabla de
+//Tabla de multiplicar: Pide al usuario un nÃºmero y muestra su tabla de
 //multiplicar del 1 al 10
     // ejemplo del ejercio de tabla del 1 al 10:
 	//tabla=5
@@ -531,8 +581,8 @@ FinFuncion
 
 //Ejercicios algoritmos selectivos (con condiciones):
 
-//Mayor de tres números: 
-//Solicita tres números y determina cuál es el mayor de ellos.
+//Mayor de tres nÃºmeros: 
+//Solicita tres nÃºmeros y determina cuÃ¡l es el mayor de ellos.
 //bosquejo:
 //ent: n1=0(leer);n2=0(leer);n3=0(leer)
 //Pro: si (n1>n2) y (n1>n3) Entonces
@@ -572,8 +622,8 @@ funcion numero_mayor
 	
 FinFuncion
 
-//Edad mínima para votar: Pregunta la edad del usuario y verifica si es elegible
-//para votar (18 años o más)
+//Edad mÃ­nima para votar: Pregunta la edad del usuario y verifica si es elegible
+//para votar (18 aÃ±os o mÃ¡s)
 //bosquejo:
 //ent: n1=0(leer)
 //pro: si (n1>=18) Entonces
@@ -595,9 +645,9 @@ funcion edad_minima
 	Fin Si
 FinFuncion
 
-//Calculadora de BMI: Crea un programa que calcule el índice de masa corporal
-//(BMI) a partir del peso y la altura del usuario, y luego indique si está en una
-//categoría de peso saludable.
+//Calculadora de BMI: Crea un programa que calcule el Ã­ndice de masa corporal
+//(BMI) a partir del peso y la altura del usuario, y luego indique si estÃ¡ en una
+//categorÃ­a de peso saludable.
 //bosquejo:
 //ent: pesokg=0(leer);estatura=0.0(leer);masacor=0(calculando)
 //pro: Si (masacor>18.4) y (masacor<29.9) Entonces
@@ -627,7 +677,7 @@ funcion calculadoraBMI
 	Fin Si
 FinFuncion
 
-//Número positivo, negativo o cero: Pide al usuario que ingrese un número y
+//NÃºmero positivo, negativo o cero: Pide al usuario que ingrese un nÃºmero y
 //muestra si es positivo, negativo o cero
 //bosquejo
 //ent: n1=0(leer)
@@ -664,34 +714,34 @@ funcion numero_pos_neg_cero
 	
 FinFuncion
 
-//Año bisiesto: Solicita al usuario un año y determina si es un año bisiesto o no.
-//Un año bisiesto es divisible por 4, pero no por 100, a menos que también sea
+//AÃ±o bisiesto: Solicita al usuario un aÃ±o y determina si es un aÃ±o bisiesto o no.
+//Un aÃ±o bisiesto es divisible por 4, pero no por 100, a menos que tambiÃ©n sea
 //divisible por 400.
-//ent: año=0(leer)
-//pro: 	Si año mod 4 = 0 y (( año mod 100 <> 0) o ( año mod 400 = 0)) Entonces
-//      escribir " el año ",año, " es bisisesto"
+//ent: aÃ±o=0(leer)
+//pro: 	Si aÃ±o mod 4 = 0 y (( aÃ±o mod 100 <> 0) o ( aÃ±o mod 400 = 0)) Entonces
+//      escribir " el aÃ±o ",aÃ±o, " es bisisesto"
 //  SiNo
-//	   escribir " el año ",año, " no es bisisesto"
+//	   escribir " el aÃ±o ",aÃ±o, " no es bisisesto"
 //	Fin Si
-//salida: la condicion del programa nos indicara con un mensaje si el año ingresado es o no bisiesto.
+//salida: la condicion del programa nos indicara con un mensaje si el aÃ±o ingresado es o no bisiesto.
 
-funcion añobisiesto
-	definir año Como entero
+funcion aÃ±obisiesto
+	definir aÃ±o Como entero
 	//definir el valor de las variables
-	año=0
-	Escribir "ingrese el año"
-	leer año
-	Si año mod 4 = 0 y (( año mod 100 <> 0) o ( año mod 400 = 0)) Entonces
-		escribir " el año ",año, " es bisisesto"
+	aÃ±o=0
+	Escribir "ingrese el aÃ±o"
+	leer aÃ±o
+	Si aÃ±o mod 4 = 0 y (( aÃ±o mod 100 <> 0) o ( aÃ±o mod 400 = 0)) Entonces
+		escribir " el aÃ±o ",aÃ±o, " es bisisesto"
 	SiNo
-		escribir " el año ",año, " no es bisisesto"
+		escribir " el aÃ±o ",aÃ±o, " no es bisisesto"
 	Fin Si
 	
 FinFuncion
 
-//Signo zodiacal: Pide al usuario que ingrese su mes y día de nacimiento, luego
+//Signo zodiacal: Pide al usuario que ingrese su mes y dÃ­a de nacimiento, luego
 //determina su signo zodiacal. Puedes usar una serie de declaraciones if para
-//comparar las fechas ingresadas con las fechas límite de cada signo zodiacal.
+//comparar las fechas ingresadas con las fechas lÃ­mite de cada signo zodiacal.
 //bosquejo:
 //ent: mes=""(leer);dia=""(leer);signo=""(como caracter);d=0(calculando)
 //pro: 	Si (mes == 1 y (dia >= 20 y dia <= 31)) o (mes == 2 y (dia <= 18))   Entonces
@@ -789,9 +839,9 @@ funcion signozodiacal
 	FinSi
 FinFuncion
 
-//Día del mes con respecto a la segunda quincena: Solicita al usuario que ingrese
-//un número de día del mes (por ejemplo, del 1 al 31) y verifica si ese día
-//pertenece a la primera quincena (días 1-15) o a la segunda quincena (días 16-31).
+//DÃ­a del mes con respecto a la segunda quincena: Solicita al usuario que ingrese
+//un nÃºmero de dÃ­a del mes (por ejemplo, del 1 al 31) y verifica si ese dÃ­a
+//pertenece a la primera quincena (dÃ­as 1-15) o a la segunda quincena (dÃ­as 16-31).
 //bosquejo:
 //ent: dia=0(leer)
 //pro: 
@@ -821,10 +871,10 @@ funcion quincena
 	
 FinFuncion
 
-//Día de la semana: Pide al usuario que ingrese un número del 1 al 7, donde 1
-//representa el domingo, 2 el lunes, 3 el martes, y así sucesivamente. Luego,
-//utiliza una estructura switch para mostrar el nombre del día de la semana
-//correspondiente al número ingresado
+//DÃ­a de la semana: Pide al usuario que ingrese un nÃºmero del 1 al 7, donde 1
+//representa el domingo, 2 el lunes, 3 el martes, y asÃ­ sucesivamente. Luego,
+//utiliza una estructura switch para mostrar el nombre del dÃ­a de la semana
+//correspondiente al nÃºmero ingresado
 //bosquejo:
 //ent: num1=0(leer);dia=""(leer);c=0(leer)
 //pro:
@@ -923,8 +973,8 @@ funcion frasesiguales
 FinFuncion
 
 //Calculadora de precio con descuento: Crea un programa que permita a un
-//usuario ingresar el precio de un artículo y un porcentaje de descuento. El
-//programa debe calcular y mostrar el precio final después del descuento.
+//usuario ingresar el precio de un artÃ­culo y un porcentaje de descuento. El
+//programa debe calcular y mostrar el precio final despuÃ©s del descuento.
 //bosquejo:
 //ent: precio=0.0(leer);item=0(leer);porceDes=0.0(leer);total=0.0(calculando)
 //pro: 
@@ -980,8 +1030,8 @@ funcion impuestoIVA
 FinFuncion
 
 //Calculadora de sueldo con aumento: Pide al usuario que ingrese su salario
-//actual y el porcentaje de aumento que recibirá. Calcula y muestra el nuevo
-//salario después del aumento
+//actual y el porcentaje de aumento que recibirÃ¡. Calcula y muestra el nuevo
+//salario despuÃ©s del aumento
 //bosquejo:
 //ent: salarioact=0(leer);aumento=0.0(calculando);salarionue=0(calculando)
 //pro: aumento=salarioact*0.50
@@ -1003,8 +1053,8 @@ funcion aumentosalarial
 	escribir "su salario actual ha sido cambiado a: ",salarionue
 FinFuncion
 
-//Calculadora de compra con múltiples artículos: Permite al usuario ingresar el
-//precio y la cantidad de varios artículos que está comprando. Calcula el total de
+//Calculadora de compra con mÃºltiples artÃ­culos: Permite al usuario ingresar el
+//precio y la cantidad de varios artÃ­culos que estÃ¡ comprando. Calcula el total de
 //la compra y aplica un descuento del 10% si el total es mayor a cierta cantidad
 //(por ejemplo, $100).
 //bosquejo
@@ -1045,7 +1095,7 @@ funcion calculadora_de_compra_de_multiples_articulos
 FinFuncion
 
 //Calculadora de impuestos sobre el salario: Solicita al usuario que ingrese su
-//salario anual y calcula el impuesto sobre la renta según las siguientes tasas:
+//salario anual y calcula el impuesto sobre la renta segÃºn las siguientes tasas:
 //hasta $10000:5%
 //de $10001 a $20000:10%
 //mas de $20000:15%
@@ -1093,39 +1143,39 @@ funcion impuesto_a_la_renta
 	escribir "el valor a pagar sobre el impuesto a la renta es: ",impuestoren
 FinFuncion
 
-//Descuento por antigüedad en la empresa: Pregunta al usuario cuántos años ha
-//estado trabajando en una empresa y calcula su bono de antigüedad. Si ha
-//trabajado más de 5 años, otorga un bono del 5% sobre su salario.
+//Descuento por antigÃ¼edad en la empresa: Pregunta al usuario cuÃ¡ntos aÃ±os ha
+//estado trabajando en una empresa y calcula su bono de antigÃ¼edad. Si ha
+//trabajado mÃ¡s de 5 aÃ±os, otorga un bono del 5% sobre su salario.
 //bosquejo:
 //ent: usuario=0(leer);bono=0(calculando)
 //pro:
 //si usuario > 5 Entonces
 //bono=450*0.05
-//escribir "usted recibe un bono de antigüedad de: ",bono
+//escribir "usted recibe un bono de antigÃ¼edad de: ",bono
 //SiNo
-//escribir "usted no recibe bono de antigüedad"
+//escribir "usted no recibe bono de antigÃ¼edad"
 //FinSi
 //salida: la condicion realizara el proceso para identificar si el empleado
-//recibe su bono por antigüedad en la empresa
-Funcion descuento_de_antigüeda_de_la_empresa
+//recibe su bono por antigÃ¼edad en la empresa
+Funcion descuento_de_antigÃ¼eda_de_la_empresa
 	Definir usuario,salario como entero 
 	definir porce,bono Como Real
 	//definir el valor de las variables
 	usuario=0;bono=0.0;salario=450;porc=0.05
-	Escribir "ingrese cuantos años tiene en la empresa:"
+	Escribir "ingrese cuantos aÃ±os tiene en la empresa:"
 	leer usuario
 	si usuario > 5 Entonces
 		bono=salario*porc
-		escribir "usted recibe un bono de antigüedad de: ",bono
+		escribir "usted recibe un bono de antigÃ¼edad de: ",bono
 	SiNo
-		escribir "usted no recibe bono de antigüedad"
+		escribir "usted no recibe bono de antigÃ¼edad"
 	FinSi
 	Escribir "Su salario actual es de: ",salario+bono
 FinFuncion
 
-//Calculadora de envío con tarifas diferentes: Crea un programa que permita al
-//usuario ingresar la distancia de envío y calcule el costo del envío. Si la distancia
-//es inferior a 50 km, el costo es de $10. Si la distancia es de 50 km o más, el
+//Calculadora de envÃ­o con tarifas diferentes: Crea un programa que permita al
+//usuario ingresar la distancia de envÃ­o y calcule el costo del envÃ­o. Si la distancia
+//es inferior a 50 km, el costo es de $10. Si la distancia es de 50 km o mÃ¡s, el
 //costo es de $20.
 //bosquejo:
 //ent:envio=0(leer);costo=0(calculando)
@@ -1156,8 +1206,8 @@ funcion calculadoratarifas
 FinFuncion
 
 //Calculadora de descuento por lealtad del cliente: Pide al usuario que ingrese el
-//total de sus compras mensuales durante un año. Si el total es superior a $500,
-//aplica un descuento del 10% en la próxima compra.
+//total de sus compras mensuales durante un aÃ±o. Si el total es superior a $500,
+//aplica un descuento del 10% en la prÃ³xima compra.
 //bosquejo:
 //ent: comprasmen=0(leer)
 //pro:
@@ -1165,13 +1215,13 @@ FinFuncion
 //escribir "usted aplica a un descuento del 10% en su siguiente compra."
 //SiNo
 //Escribir "usted no aplica a un descuento."
-//salida: la condicion del programa enseñara un mensaje a el usuario si aplico para un descuento
+//salida: la condicion del programa enseÃ±ara un mensaje a el usuario si aplico para un descuento
 
 funcion calculadora_lealtad_del_cliente
 	definir comprasmen,descu Como Real
 	//definir el valor de las variables
 	comprasmen=0.0
-	Escribir "ingrese el total de sus compras durante el año:"
+	Escribir "ingrese el total de sus compras durante el aÃ±o:"
 	leer comprasmen
 	si comprasmen > 500 Entonces
 		escribir "usted aplico a un descuento del 10% en su siguiente compra."
@@ -1183,10 +1233,10 @@ FinFuncion
 
 // Calculadora de descuento por volumen de compra: Permite al usuario ingresar
 //la cantidad de unidades de un producto que va a comprar y el precio unitario.
-//Aplica descuentos por volumen de compra según las siguientes reglas:
+//Aplica descuentos por volumen de compra segÃºn las siguientes reglas:
 //37. 10-50 unidades: 5% de descuento
 //38. 51-100 unidades: 10% de descuento
-//39. Más de 100 unidades: 15% de descuento
+//39. MÃ¡s de 100 unidades: 15% de descuento
 //bosquejo:
 //ent: producto=0(leer);preciouni=0(leer)
 //pro:
@@ -1244,8 +1294,8 @@ Funcion calculadora_por_volumen_de_compra
 	Escribir "el valor total de su compra es: ",total
 FinFuncion
  
-//Calculadora de costo de servicio: Pregunta al usuario cuántas horas de servicio
-//necesita y calcula el costo total. Si las horas son más de 10, aplica un
+//Calculadora de costo de servicio: Pregunta al usuario cuÃ¡ntas horas de servicio
+//necesita y calcula el costo total. Si las horas son mÃ¡s de 10, aplica un
 //descuento del 20%.
 //bosquejo:
 //ent:horas=0(leer);servicio=50(leer);des=0.0(calculando);c=0(calculando);costotal=0(calculando)
@@ -1284,8 +1334,8 @@ funcion calculadora_de_costo_de_servicio
 	FinSi
 FinFuncion
 
-//Suma de números pares: Utiliza un bucle for para calcular la suma de los
-//números pares del 1 al 50
+//Suma de nÃºmeros pares: Utiliza un bucle for para calcular la suma de los
+//nÃºmeros pares del 1 al 50
 //bosquejo:
 //entrada:x=0(ingresado);n=50;sumapar(sumapar+x)
 //pro:
@@ -1308,7 +1358,7 @@ Funcion suma_numeros_pares
 FinFuncion
 
 //Tabla de multiplicar: Utiliza un bucle for para imprimir la tabla de multiplicar de
-//un número ingresado por el usuario del 1 al 12
+//un nÃºmero ingresado por el usuario del 1 al 12
 //bosquejo:
 //entrada:tabla=0(ingresado);n=0(leer);
 //proceso: leer la variables n 
@@ -1327,7 +1377,7 @@ Funcion tabla_de_multiplicar_buclefor
 	Fin Para
 FinFuncion
 
-//Contador de vocales: Utiliza un bucle while para contar el número de vocales en una
+//Contador de vocales: Utiliza un bucle while para contar el nÃºmero de vocales en una
 //palabra ingresada por el usuario.
 //bosquejo:
 //entrada:palabra=""(leer);vocales=0(calculando numero de vocales en la palabra ingresada)
@@ -1377,7 +1427,7 @@ Funcion contador_de_vocales
 	escribir "el numero de vocales de la palabra son:",z
 FinFuncion
 
-//Contador de digitos: Utiliza un bucle for para contar el numero de dígitos en
+//Contador de digitos: Utiliza un bucle for para contar el numero de dÃ­gitos en
 //una palabra ingresada por el usuario.
 //bosquejo:
 //entrada: text=""(leer);n=""(subcadena(text,x,x));letras(calculando el numero de digitos de la palabra)
@@ -1405,8 +1455,8 @@ funcion contador_de_digitos
 	escribir "el numero de digitos es de: ",letras
 FinFuncion
 
-//Adivina el número: Genera un número aleatorio y pide al usuario que adivine el
-//número. Utiliza un bucle while para repetir la solicitud hasta que adivine
+//Adivina el nÃºmero: Genera un nÃºmero aleatorio y pide al usuario que adivine el
+//nÃºmero. Utiliza un bucle while para repetir la solicitud hasta que adivine
 //bosquejo:
 //entrada:numale=0(asignado);num1=0(leer)
 //proceso: leemos el valor ingresado por el usuario
@@ -1431,7 +1481,7 @@ Funcion numero_aleatorio
 	escribir "el numero que ingresaste es correcto."
 FinFuncion
 
-//Contador de Alfabeto: Utiliza un bucle for para contar el número de letras del
+//Contador de Alfabeto: Utiliza un bucle for para contar el nÃºmero de letras del
 //alfabeto(a..z) en una palabra ingresada por el usuario.
 //bosquejo:
 //entrada:palabra=0(leer);long=(longitud(palabra);cad=subcadena(palabra,i,i)
@@ -1463,8 +1513,8 @@ funcion contador_de_alfabeto
 	
 FinFuncion
 
-//Suma de números impares: Utiliza un bucle while para calcular la suma de los
-//números impares del 1 al 100.
+//Suma de nÃºmeros impares: Utiliza un bucle while para calcular la suma de los
+//nÃºmeros impares del 1 al 100.
 //bosquejo:
 //entrada:x=1;suma(suma=suma+x)
 //Proceso:	Mientras x<=100 Hacer
@@ -1509,9 +1559,9 @@ funcion contador_de_caracteres
 	escribir "el numero de caracteres en la palabra es: ",n
 FinFuncion
 
-//Suma de números: Pide al usuario que ingrese números enteros positivos uno
-//por uno y utiliza un bucle while para calcular la suma de estos números. El ciclo
-//debe terminar cuando el usuario ingrese un número negativo.
+//Suma de nÃºmeros: Pide al usuario que ingrese nÃºmeros enteros positivos uno
+//por uno y utiliza un bucle while para calcular la suma de estos nÃºmeros. El ciclo
+//debe terminar cuando el usuario ingrese un nÃºmero negativo.
 //bosquejo:
 //entrada:n1(leer);acu=(acu+num1)
 //proceso: leer el primer numero por el usuario, colocar el comando bucle while, luego
@@ -1532,8 +1582,8 @@ funcion suma_de_numeros
 		Escribir "el valor total es de: ",acu
 FinFuncion
 
-// Cuenta regresiva: Pide al usuario que ingrese un número entero positivo y utiliza
-//un bucle while para mostrar una cuenta regresiva desde ese número hasta 1.
+// Cuenta regresiva: Pide al usuario que ingrese un nÃºmero entero positivo y utiliza
+//un bucle while para mostrar una cuenta regresiva desde ese nÃºmero hasta 1.
 //bosquejo:
 //entrada: num1=(leer)
 //proceso: leer el numero
@@ -1553,7 +1603,7 @@ funcion Cuenta_regresiva
 	FinMientras
 FinFuncion
 
-//Suma de elementos: Crea un arreglo de números enteros y calcula la suma de todos sus
+//Suma de elementos: Crea un arreglo de nÃºmeros enteros y calcula la suma de todos sus
 //elementos.
 //bosquejo:
 //entrada:arreglo=(20,10,50,80,100);acu=(acu+arreglo[posicion])
@@ -1582,7 +1632,7 @@ FinFuncion
 
 
 
-//Promedio de calificaciones: Crea un arreglo de calificaciones (números decimales) y
+//Promedio de calificaciones: Crea un arreglo de calificaciones (nÃºmeros decimales) y
 //calcula el promedio de las calificaciones
 //bosquejo
 //entrada:calificaciones[9.18,7.5,7.35,6.25,8.62];posicion=[0,1,2,3];n=5;
@@ -1621,7 +1671,7 @@ funcion promedio_califi
 	escribir "Su promedio final es de: ",promedio
 FinFuncion
 
-//Mayor y menor valor: Encuentra el valor máximo y mínimo en un arreglo de números
+//Mayor y menor valor: Encuentra el valor mÃ¡ximo y mÃ­nimo en un arreglo de nÃºmeros
 //enteros.
 //bosquejo:
 //entrada:numbers[6,5,2,8,8,3,7];n=7;posiciones=[0,1,2...];valormin=0(calculando);valormax=0(calculando)
@@ -1674,7 +1724,7 @@ Funcion valormax_min
 	escribir "el valor minimo es: ",valormin
 FinFuncion
 
-//Buscar un elemento: Pide al usuario que ingrese un número y verifica si ese número está
+//Buscar un elemento: Pide al usuario que ingrese un nÃºmero y verifica si ese nÃºmero estÃ¡
 //presente en un arreglo dado.
 //bosquejo:
 //entrada:ArregloNum[3,6,9,5];posicones[0,1...3];n=4;num1=0(leer);c=0(calculando)
@@ -1714,7 +1764,7 @@ Funcion buscar_un_elemento
 	FinSi
 FinFuncion
 
-//Contar elementos pares: Cuenta cuántos números pares hay en un arreglo de números
+//Contar elementos pares: Cuenta cuÃ¡ntos nÃºmeros pares hay en un arreglo de nÃºmeros
 //enteros
 //bosquejo:
 //entrada:arreglopares[1,2,3,4,5,6,7,8,9];n=9;posiciones[1,2...9]cont=0(cont+1)
@@ -1724,7 +1774,7 @@ FinFuncion
 //    cont=cont+1
 // FinSi
 //FinPara
-//salida: la variable ´cont´ contiene la cantidad de numeros pares que hay dentro del arreglo
+//salida: la variable Â´contÂ´ contiene la cantidad de numeros pares que hay dentro del arreglo
 funcion contar_elementos_pares
 	definir arreglopares,n,posiciones,cont Como Entero
 	n=9;cont=0
@@ -1742,7 +1792,7 @@ funcion contar_elementos_pares
 	escribir "En el arreglo Existen ",cont," numeros pares."
 FinFuncion
 
-//Inversión de un arreglo: Invierte el orden de los elementos en un arreglo. Por ejemplo,
+//InversiÃ³n de un arreglo: Invierte el orden de los elementos en un arreglo. Por ejemplo,
 //[1, 2, 3] se convierte en [3, 2, 1]
 //bosquejo:
 //entrada:arregloinver[1,2...6];posiciones[1,2...6];n=6;cont=0(cont-1)
@@ -1774,8 +1824,8 @@ Funcion inversion_de_un_arreglo
 	FinPara
 FinFuncion
 
-//Buscar el índice: Pide al usuario que ingrese un valor y encuentra el índice de ese valor
-//en un arreglo. Si el valor aparece más de una vez, muestra todos los índices
+//Buscar el Ã­ndice: Pide al usuario que ingrese un valor y encuentra el Ã­ndice de ese valor
+//en un arreglo. Si el valor aparece mÃ¡s de una vez, muestra todos los Ã­ndices
 //bosquejo:
 //entrada:arregloind[1,2....7];n=7;posiciones[0,1....7];var1=0(leer);cont=0(cont+1)
 //Proceso: leer la variable,realizar dos bucles;uno para mostrar valores dentro del arreglo;
@@ -1824,7 +1874,7 @@ Funcion buscar_el_indice
 	FinSi
 FinFuncion
 
-//Función sin parámetros para saludar.
+//FunciÃ³n sin parÃ¡metros para saludar.
 //bosquejo:
 //entrada:Sin parametros
 //Proceso: Escribir "hola, muy buenos dias."
@@ -1833,7 +1883,7 @@ Funcion saludar
 	escribir "Hola, muy buenos dias."
 FinFuncion
 
-//Función con parámetros para sumar dos números
+//FunciÃ³n con parÃ¡metros para sumar dos nÃºmeros
 //bosquejo
 //entrada:suma=0(a+b)
 //proceso: leer las variables
@@ -1846,7 +1896,7 @@ funcion suma<-Sumadosnumeros_Fun(a,b)
 	escribir "el resultado de ",a," + ",b," es de: " Sin Saltar
 FinFuncion
 
-//Función con return para multiplicar dos números
+//FunciÃ³n con return para multiplicar dos nÃºmeros
 //bosquejo:
 //entrada:n=0(leer),n2=0(leer)
 //proceso:multi=n*n2
@@ -1860,7 +1910,7 @@ funcion multi<-multiplicarnumeros_Fun
 	Escribir "El resultado de la operacion es: " Sin Saltar
 FinFuncion
 
-//Función sin return para determinar si un número es par o impar
+//FunciÃ³n sin return para determinar si un nÃºmero es par o impar
 //bosquejo:
 //entrada:num1=0(leer)
 //proceso:leer la variable
@@ -1880,7 +1930,7 @@ Funcion valor_par_imparFun
 	FinSi
 FinFuncion
 
-//Función con parámetros y return para calcular el área de un rectángulo
+//FunciÃ³n con parÃ¡metros y return para calcular el Ã¡rea de un rectÃ¡ngulo
 //bosquejo:
 //entrada:area=(a*b
 
@@ -1891,7 +1941,7 @@ Funcion area<-Arearec(a,b)
 	escribir "El area del rectangulo de ",a," y ",b," es de: " Sin Saltar
 FinFuncion
 
-//Función sin parámetros para imprimir tu nombre
+//FunciÃ³n sin parÃ¡metros para imprimir tu nombre
 //bosquejo:
 //entrada:nombre=""(leer)
 //proceso:escribir nombre
@@ -1900,10 +1950,10 @@ funcion imprimir_nombre
 	definir nombre Como Caracter
 	Escribir "Ingresar tu nombre:"
 	leer nombre
-	escribir "hola, ¿como estas? ",nombre,"."
+	escribir "hola, Â¿como estas? ",nombre,"."
 FinFuncion
 
-//Función con return para convertir grados Celsius a Fahrenheit
+//FunciÃ³n con return para convertir grados Celsius a Fahrenheit
 //bosquejo:
 //entrada:grados=0(leer);fahren=0((grados*5/9)+32)
 //Proceso leer la variable grados
@@ -1911,12 +1961,12 @@ FinFuncion
 //salida: fahren
 funcion fahren<-fahrenheit
 	definir grados,fahren Como Real
-	escribir "Ingrese el numero de grados celcius (c°):"
+	escribir "Ingrese el numero de grados celcius (cÂ°):"
 	leer grados
 	fahren=(grados*9/5)+32
 FinFuncion
 
-//Función con parámetros para contar un carácter en una frase
+//FunciÃ³n con parÃ¡metros para contar un carÃ¡cter en una frase
 //bosquejo:
 //entrada:frase=0(leer);long=subcadena(frase,x,x);x=0(contador);cont=(cont+1);longitud(frase)=(valor final)
 //Proceso: leer la variable
@@ -1943,7 +1993,7 @@ funcion cont<-contarcar_frase(frase,cont)
 	FinPara
 FinFuncion
 
-//Función sin return para imprimir números del 1 al 10
+//FunciÃ³n sin return para imprimir nÃºmeros del 1 al 10
 //bosquejo:
 //entrada:arreglo[1,2,3...10];n=10
 //Para x<-0 hasta 10 con paso 1 Hacer
@@ -1970,7 +2020,7 @@ funcion numeros_1_10
 	FinPara
 FinFuncion
 
-//Función con parámetros y return para sumar una lista de números
+//FunciÃ³n con parÃ¡metros y return para sumar una lista de nÃºmeros
 //bosquejo:
 //entrada: parametros arreglosuma[7];n=7(asignado);acu=(acu+arreglosuma[n])
 //proceso: asignamos valores al arreglo, realizamos un comando bucle for
@@ -2032,7 +2082,7 @@ Algoritmo ejercicios_algoritmicos_secuenciales_paso_a_paso
 	//edad_minima()
 	//calculadoraBMI
 	//numero_pos_neg_cero()
-	//añobisiesto()
+	//aÃ±obisiesto()
 	//signozodiacal()
 	//quincena()
 	//diadelasemana()
@@ -2042,7 +2092,7 @@ Algoritmo ejercicios_algoritmicos_secuenciales_paso_a_paso
 	//aumentosalarial()
 	//calculadora_de_compra_de_multiples_articulos()
 	//impuesto_a_la_renta()
-	//descuento_de_antigüeda_de_la_empresa()
+	//descuento_de_antigÃ¼eda_de_la_empresa()
 	//calculadoratarifas()
 	//calculadora_lealtad_del_cliente()
 	//calculadora_por_volumen_de_compra()
